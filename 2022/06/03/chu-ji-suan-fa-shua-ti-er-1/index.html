@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="初级算法刷题系列一, Cole&#39;s Blog">
+    <meta name="keywords" content="初级算法刷题系列二 , Cole&#39;s Blog">
     <meta name="description" content="Stay foolish,Stay hungry">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>初级算法刷题系列一 | Cole&#39;s Blog</title>
+    <title>初级算法刷题系列二  | Cole&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">初级算法刷题系列一</h1>
+                    <h1 class="description center-align post-title">初级算法刷题系列二 </h1>
                 </div>
             </div>
         </div>
@@ -440,15 +440,6 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                算法
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
@@ -456,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-28
+                    2022-06-03
                 </div>
                 
 
@@ -477,51 +468,31 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ul>
-<li>最近在刷leecode的算法题，发现有好多不会的，就想着做个笔记记录下来，要不时间长久容易忘。在刷题过程中发现用的最熟悉的还是JAVA。花的时间做多，印象越深刻。</li>
-<li>计划每天刷两道算法题，坚持总结，总会有改变的。    </li>
+                <h4 id="买卖股票的最佳时机-II"><a href="#买卖股票的最佳时机-II" class="headerlink" title="买卖股票的最佳时机 II"></a>买卖股票的最佳时机 II</h4><ul>
+<li>用到动态规划和贪心算法</li>
+<li>解法四最简单  </li>
 </ul>
 <hr>
-<h3 id="一-删除排序数组中的重复项"><a href="#一-删除排序数组中的重复项" class="headerlink" title="一.删除排序数组中的重复项"></a>一.删除排序数组中的重复项</h3><p>给你一个 <strong>升序排列</strong> 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 <strong>只出现一次</strong> ，返回删除后数组的新长度。元素的 相对顺序 应该保持 <strong>一致</strong> 。</p>
-<p>由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个元素，那么 nums 的前 k 个元素应该保存最终结果。</p>
-<p>将最终结果插入 nums 的前 k 个位置后返回 k 。</p>
-<p>不要使用额外的空间，你必须在 <strong>原地 修改输入数组</strong> 并在使用 O(1) 额外空间的条件下完成。</p>
-<p><strong>判题标准:</strong></p>
-<p>系统会用下面的代码来测试你的题解:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] nums = [...]; <span class="comment">// 输入数组</span></span><br><span class="line"><span class="type">int</span>[] expectedNums = [...]; <span class="comment">// 长度正确的期望答案</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> removeDuplicates(nums); <span class="comment">// 调用</span></span><br><span class="line"></span><br><span class="line"><span class="type">assert</span> <span class="variable">k</span> <span class="operator">=</span>= expectedNums.length;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">    <span class="keyword">assert</span> nums[i] == expectedNums[i];</span><br><span class="line">&#125;  </span><br><span class="line"> </span><br></pre></td></tr></table></figure>
-<p>如果所有断言都通过，那么您的题解将被通过。</p>
-<p> </p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">输出：<span class="number">2</span>, nums = [<span class="number">1</span>,<span class="number">2</span>,_]</span><br><span class="line">解释：函数应该返回新的长度 <span class="number">2</span> ，并且原数组 nums 的前两个元素被修改为 <span class="number">1</span>, <span class="number">2</span> 。不需要考虑数组中超出新长度后面的元素。</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">输出：<span class="number">5</span>, nums = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">解释：函数应该返回新的长度 <span class="number">5</span> ， 并且原数组 nums 的前五个元素被修改为 <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> 。不需要考虑数组中超出新长度后面的元素。</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
 <ul>
-<li>0 &lt;= nums.length &lt;= 3 * 104</li>
-<li>-104 &lt;= nums[i] &lt;= 104</li>
-<li>nums 已按 升序 排列</li>
+<li>给你一个整数数组 prices ，其中 prices[i] 表示某支股票第 i 天的价格。</li>
 </ul>
-<p>作者：力扣 (LeetCode)<br>链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/leetbook/read/top-interview-questions-easy/x2gy9m/">https://leetcode.cn/leetbook/read/top-interview-questions-easy/x2gy9m/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<blockquote>
-<p><strong>1.双指针解法</strong> </p>
-</blockquote>
+<p>在每一天，你可以决定是否购买和/或出售股票。你在任何时候 最多 只能持有 一股 股票。你也可以先购买，然后在 同一天 出售。</p>
+<p>返回 你能获得的 最大 利润 。<br>示例 1：</p>
+<p>输入：prices = [7,1,5,3,6,4]<br>输出：7<br>解释：在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5 - 1 = 4 。<br>     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6 - 3 = 3 。<br>     总利润为 4 + 3 = 7 。<br>示例 2：</p>
+<p>输入：prices = [1,2,3,4,5]<br>输出：4<br>解释：在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5 - 1 = 4 。<br>     总利润为 4 。<br>示例 3：</p>
+<p>输入：prices = [7,6,4,3,1]<br>输出：0<br>解释：在这种情况下, 交易无法获得正利润，所以不参与交易可以获得最大利润，最大利润为 0 。
+ </p>
+<p>提示：</p>
+<p>1 &lt;= prices.length &lt;= 3 * 104<br>0 &lt;= prices[i] &lt;= 104</p>
+<p>作者：力扣 (LeetCode)<br>链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/leetbook/read/top-interview-questions-easy/x2zsx1/">https://leetcode.cn/leetbook/read/top-interview-questions-easy/x2zsx1/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。*/</p>
+<p>*解法一  动态规划</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxProfit</span><span class="params">(<span class="type">int</span>[] prices)</span> &#123;</span><br><span class="line">        <span class="comment">//买卖股票的最佳时机</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> prices.length;</span><br><span class="line">        <span class="keyword">if</span> (prices == <span class="literal">null</span> || len &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span>[][] dp = <span class="keyword">new</span> <span class="title class_">int</span>[len][<span class="number">2</span>];</span><br><span class="line">        <span class="comment">//初始化 第一天未持有股票收益为0</span></span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">//第一天持有股票的收益</span></span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">1</span>] = -prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="comment">/*递推公式 dp[i][0]代表第i+1天交易完之后手里没有股票的收益，一种是当天没有进		行任何交易，又因为手里没有股票，</span></span><br><span class="line"><span class="comment">            当天没有股票的收益只能取前一天手里没有股票的收益，另一种情况当天把手里股票卖		了，既然能卖，说明手里持有股票，</span></span><br><span class="line"><span class="comment">            哲哲时候取前一天手里持有股票的利润加上当天股票能卖的价格。这两种情况去利润最		大的即可*/</span></span><br><span class="line">            dp[i][<span class="number">0</span>] = Math.max(dp[i - <span class="number">1</span>][<span class="number">0</span>], dp[i - <span class="number">1</span>][<span class="number">1</span>] + prices[i]);</span><br><span class="line">            <span class="comment">/*dp[i][1]代表第i+1天交易完之后手里持有股票的收益，一种情况是当天没有任何交		易，又因为手里持有股票，说明股票前一天已经持有，</span></span><br><span class="line"><span class="comment">            取前一天持有股票的利润，另一种情况是当天买入股票，说明前一天没持有股票。取前		一天持有股票的利润减去买入股票的价格*/</span></span><br><span class="line">            dp[i][<span class="number">1</span>] = Math.max(dp[i - <span class="number">1</span>][<span class="number">1</span>], dp[i - <span class="number">1</span>][<span class="number">0</span>] - prices[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//最后一天不持有股票的利润最大</span></span><br><span class="line">        <span class="keyword">return</span> dp[len - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>题目中要求要是用原地修改输入数组，所以不能创建额外的数组。考虑使用双指针解决。   </li>
+<li>解法二:解法一的改进,用hold代替二维数组<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxProfit2</span><span class="params">(<span class="type">int</span>[] prices)</span> &#123;</span><br><span class="line">        <span class="comment">//买卖股票的最佳时机</span></span><br><span class="line">        <span class="keyword">if</span> (prices == <span class="literal">null</span> || prices.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">hold</span> <span class="operator">=</span> -prices[<span class="number">0</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">noHold</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; prices.length; i++) &#123;</span><br><span class="line">            noHold = Math.max(noHold, hold + prices[i]);</span><br><span class="line">            hold = Math.max(hold, noHold - prices[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> noHold; &#125; ```</span><br><span class="line">      </span><br><span class="line">    时间复杂度：O(n)，其中 nn 为数组的长度。一共有 2n 个状态，每次状态转移的时间复杂度为 		O(<span class="number">1</span>)，因此时间复杂度为 O(2n)=O(n)。</span><br><span class="line"></span><br><span class="line">	空间复杂度：O(n)。我们需要开辟 O(n) 空间存储动态规划中的所有状态。如果使用空间优化，空间复	杂度可以优化至 O(<span class="number">1</span>)  </span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*  解法三 暴力搜索找到买卖股票的最佳时机 找到股票起涨点，再找到股票上涨最大值  </span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxProfit3</span><span class="params">(<span class="type">int</span>[] prices)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (prices == <span class="literal">null</span> || prices.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">total</span> <span class="operator">=</span> <span class="number">0</span>, index = <span class="number">0</span>, len = prices.length;</span><br><span class="line">        <span class="keyword">while</span> (index &lt; len) &#123;</span><br><span class="line">            <span class="comment">//如果下跌就一直找，直到找到股票起涨点为止</span></span><br><span class="line">            <span class="keyword">while</span> (index &lt; (len - <span class="number">1</span>) &amp;&amp; prices[index] &gt;= prices[index + <span class="number">1</span>])</span><br><span class="line">                index++;</span><br><span class="line">            <span class="comment">//股票开始上涨的值，也就是这段时间上涨的最小值</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> prices[index];</span><br><span class="line">            <span class="comment">//一直找到股票上涨的最大值为止</span></span><br><span class="line">            <span class="keyword">while</span> (index &lt; (len - <span class="number">1</span>) &amp;&amp; prices[index] &lt; prices[index + <span class="number">1</span>])</span><br><span class="line">                index++;</span><br><span class="line">            <span class="comment">//计算这段上涨时间的差值，然后累加</span></span><br><span class="line">                total += prices[index++] - min;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> total;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+<li> 解法四 最简单,<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxProfit4</span><span class="params">(<span class="type">int</span>[] prices)</span> &#123;</span><br><span class="line">        <span class="comment">//贪心算法：在对问题求解时，总是做出当前来看最好的选择，不是从整体最优上加以考虑，算法得到的是在某种意义下的局部最优解</span></span><br><span class="line">        <span class="comment">//数组相邻元素两两相减，差值为正值的求和.最简单快速</span></span><br><span class="line">        <span class="keyword">if</span>( prices==<span class="literal">null</span> || prices.length&lt;<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> total=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span><span class="number">0</span>;i&lt; prices.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">                total+=Math.max(prices[i+<span class="number">1</span>]-prices[i],<span class="number">0</span>); </span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> total;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+时间复杂度：O(n)，其中 nn 为数组的长度。我们只需要遍历一次数组即可。</li>
 </ul>
-<p>1.如果左指针和右指针指向的值一样，说明有重复的，左指针不动，右指针继续往右移动。</p>
-<p>2.如果左指针和右指针指向的值不一样，左指针右移一位，把右指针指向的值赋给左指针。然后右指针往右移</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">    <span class="keyword">public</span>  <span class="type">int</span> <span class="title function_">removeDuplicates</span><span class="params">(<span class="type">int</span>[] A)</span>&#123;</span><br><span class="line">        <span class="comment">/*双指针解决，边界条件判断*/</span></span><br><span class="line">        <span class="keyword">if</span> (A.length==<span class="number">0</span> || A==<span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> left=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> right=<span class="number">1</span>;right&lt;A.length;right++)&#123;</span><br><span class="line">            <span class="comment">/*如果左指针和右指针指向的值一样，说明有重复的，左指针不动，右指针继续往右移动</span></span><br><span class="line"><span class="comment">            如果左指针和右指针指向的值不一样，左指针右移一位，把右指针指向的值赋给左指针。然后右指针往右移*/</span></span><br><span class="line">            <span class="keyword">if</span>(A[left]!=A[right])</span><br><span class="line">                A[++left]=A[right];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ++left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;	  </span><br><span class="line">时间复杂度：O(n)，其中 n 是数组的长度。快指针和慢指针最多各移动 n次。</span><br><span class="line">空间复杂度：O(<span class="number">1</span>)。只需要使用常数的额外空间。</span><br><span class="line">```  </span><br><span class="line">    </span><br><span class="line">&gt;**<span class="number">2.</span>通用解法** </span><br><span class="line"></span><br><span class="line">将原问题的‘’最多保留一位‘’修改为‘’最多保留k位‘’。</span><br><span class="line">对于此类问题，我们应该进行如下考虑：</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span>	由于是保留 k 个相同数字，对于前 k 个数字，我们可以直接保留。</span><br><span class="line"><span class="number">2.</span>	对于后面的任意数字，能够保留的前提是：与当前写入的位置前面的第 k 个元素进行比较，不相同则保留。</span><br><span class="line"></span><br><span class="line">举个例子，我们令 k=<span class="number">1</span>，假设有样例：[<span class="number">3</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span>	设定变量 idx，指向待插入位置。idx 初始值为 <span class="number">0</span>，目标数组为 []</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>	首先我们先让第 <span class="number">1</span> 位直接保留（性质 <span class="number">1</span>）。idx 变为 <span class="number">1</span>，目标数组为 [<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>	继续往后遍历，能够保留的前提是与 idx 的前面 <span class="number">1</span> 位元素不同（性质 <span class="number">2</span>），因此我们会跳过剩余的 <span class="number">3</span>，将第一个 <span class="number">4</span> 追加进去。idx 变为 <span class="number">2</span>，目标数组为 [<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="number">4.</span>	继续这个过程，跳过剩余的 <span class="number">4</span>，将第一个 <span class="number">5</span> 追加进去。idx 变为 <span class="number">3</span>，目标数组为 [<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="number">5.</span>	当整个数组被扫描完，最终我们得到了目标数组 [<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] 和 答案 idx 为 <span class="number">3</span>。  </span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeDuplicates2</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> process(nums,<span class="number">1</span>)</span><br><span class="line">        <span class="comment">//通用解法</span></span><br><span class="line">        <span class="type">int</span> <span class="title function_">process</span><span class="params">(<span class="type">int</span>[] nums,<span class="type">int</span> k)</span>&#123;</span><br><span class="line">            <span class="type">int</span> index=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> x:nums)&#123;</span><br><span class="line">                <span class="keyword">if</span>(index&lt;k || nums[index-k]!=x)&#123;</span><br><span class="line">                    nums[index++]=x;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> index;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-<p>时间复杂度为O(n)；空间复杂度为O（1）<br>利用「通用解法」思路，还能解决题目（k=2 的情况）。参考三叶刷题日记</p>
-<blockquote>
-<p><strong>3.python逆序删除.</strong> </p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    #python逆序删除</span><br><span class="line">    def  <span class="title function_">removeDuplicates</span><span class="params">(self,nums)</span> -&gt; <span class="type">int</span>:</span><br><span class="line">        <span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(len(nums)</span>-<span class="number">1</span>,<span class="number">0</span>,-<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> nums[i]==nums[i-<span class="number">1</span>]:</span><br><span class="line">                del nums[i]</span><br><span class="line">        <span class="keyword">return</span> len(nums)</span><br><span class="line"></span><br><span class="line"><span class="type">if</span> <span class="variable">__name__</span> <span class="operator">=</span>=<span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    nums = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">    sol = Solution()</span><br><span class="line">    print(<span class="string">&quot;%d,nums=%s&quot;</span>%(sol.removeDuplicates(nums),nums))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<p>时间复杂度：O(n)，其中 n 是数组的长度。快指针和慢指针最多各移动 nn次。<br>空间复杂度：O(1)。只需要使用常数的额外空间。</p>
-<pre><code>
-</code></pre>
+<p> 空间复杂度：O(1)。只需要常数空间存放若干变量。</p>
 
                 
             </div>
@@ -538,7 +509,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">cole</a>
+                    <a href="/about" rel="external nofollow noreferrer">Cole</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -548,7 +519,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://cole840.github.io/2022/05/28/hello-world/">http://cole840.github.io/2022/05/28/hello-world/</a>
+                    <a href="http://cole840.github.io/2022/06/03/chu-ji-suan-fa-shua-ti-er-1/">http://cole840.github.io/2022/06/03/chu-ji-suan-fa-shua-ti-er-1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -561,7 +532,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint polocy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">cole</a>
+                    <a href="/about" target="_blank">Cole</a>
                     !
                 </span>
             </div>
@@ -761,13 +732,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/06/03/chu-ji-suan-fa-shua-ti-er-1/">
+                <a href="/2022/06/03/chu-ji-suan-fa-shua-ti-er/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="初级算法刷题系列二 ">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="初级算法刷题系列三">
                         
-                        <span class="card-title">初级算法刷题系列二 </span>
+                        <span class="card-title">初级算法刷题系列三</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -806,13 +777,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/28/bo-ke-jian-jie/">
+                <a href="/2022/05/28/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="博客简介">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="初级算法刷题系列一">
                         
-                        <span class="card-title">博客简介</span>
+                        <span class="card-title">初级算法刷题系列一</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -827,11 +798,23 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            cole
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
                 </div>
                 
             </div>
